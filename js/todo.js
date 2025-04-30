@@ -36,8 +36,7 @@ function renderTodos() {
         <td style="text-decoration:line-through; padding: 5px; text-align: left">${todo.text}</td><td style="padding: 5px;">${new Date(todo.timestamp).toLocaleString()}</td>
         <td><input type="checkbox" id="Completed" name="Completed" checked="checked">Completed</input></td>
         <td><button onclick="deleteTodo(${index})">Delete</button></td>${index}
-        `;
-        console.log(index);
+        `;        
         //console.log(todo.completed);
         //console.log("Hello 1");
         /*<p style="text-decoration:line-through">${todo.text} - <em>${new Date(todo.timestamp).toLocaleString()}</em></p>        
@@ -69,8 +68,7 @@ function renderTodos() {
         <td><input type="checkbox" id="Completed" name="Completed">Completed</input></td>
         <td><button onclick="deleteTodo(${index})">Delete</button></td>${index}
         `;
-        console.log(index);
-        console.log(todo.completed);
+        
         //const td = tr.insertCell();
         //td.appendChild(document.createTextNode(`${todo.text} ${new Date(todo.timestamp).toLocaleString()}`));
         //td.innerHTML = `<input type="checkbox" id="Completed" name="Completed" checked="checked">Completed</input>`;
@@ -93,7 +91,7 @@ function renderTodos() {
         //i++;
       }
       //console.log("Hello 5");      
-      table.addEventListener("click", () => toggleComplete(todo.text, tr));
+      tr.addEventListener("click", () => toggleComplete(todo.text, tr));
       //console.log("Hello 6");
       table.appendChild(tr);
       //body.appendChild(table);
